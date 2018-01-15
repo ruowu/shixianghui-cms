@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"　content= "width=device-width, maximum-scale=1,　miniumum-scale=1, user-scalable=no" />
+    <title>登录页面</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../layui/layui.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/url.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.min.js"></script>
+</head>
+<body>
+      <!--头部导航部分-->
+     <div class="header">
+         <div class="logo">
+             <img src="../images/logo.jpg" alt="logo" style="width: 80px;height: 90px">
+             <span class="company-name">狮享汇后台管理系统</span>
+         </div>
+     </div>
+      <!--登陆表单部分-->
+     <div>
+         <form action="" class="formdata">
+             <!--表头-->
+             <p class="formTitle formStyle">
+                 <!--<i class="layui-icon pepole" style="font-size:24px;color:#0062AE;background:#EDEDED; border-radius: 16px;padding: 5px;">&#xe68e;</i>-->
+                 <span class="titleText">管理登陆</span>
+             </p>
+             <!--用户名-->
+             <p class="userName formStyle">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="200px" height="200.00px" viewBox="0 0 1024 1024" version="1.1"><path fill="#333333" d="M492.642454 544.492238c138.576752 0 250.922119-112.345367 250.922119-250.924119 0-138.576752-112.344367-250.922119-250.922119-250.922119-138.578752 0-250.924119 112.345367-250.924119 250.923119 0 138.577752 112.345367 250.923119 250.924119 250.923119M822.308727 696.717671c-58.854621-62.071545-78.651157-83.380046-186.46163-89.231909H349.42681c-107.810473 5.851863-127.607009 27.159363-186.461629 89.231909-62.510535 64.169496-112.295368 145.404592-88.694922 246.144231 26.184386 65.876456 96.935728 81.138098 163.83616 81.138098h509.062069c66.899432 0 137.699773-15.261642 163.885159-81.138098 23.599447-100.739639-26.185386-181.974735-88.74492-246.144231"/></svg>
+                 <input type="text" name="userName" placeholder="请输入用户名" class="userName" id="userName">
+             </p>
+             <p class="passWord formStyle">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="200px" height="200.00px" viewBox="0 0 1024 1024" version="1.1"><path fill="#333333" d="M942.068478 833.533041zM830.779835 447.488731h-62.756299l0.190335-184.894034c0-110.011556-114.263393-199.144596-255.525698-199.144596-141.079132 0-255.526721 89.13304-255.52672 199.144596l-1.188059 184.894034h-64.130599c-35.31532 0-62.506613 28.470425-62.506613 56.004525l-1.375323 400.069744c0 27.501354 29.940916 56.004525 65.257259 56.004525h639.062907c35.193547 0 62.380746-28.503171 62.380746-56.004525l1.375324-400.069744c0-27.533077-30.063713-56.004525-65.25726-56.004525z m-191.643761 0h-255.151168V255.469416c0-54.880935 58.381665-92.477204 128.702244-92.477205 70.381977 0 127.32385 37.595246 127.323851 92.477205l-0.874927 192.019315z"/></svg>
+                  <input type="password"  name="passWord" placeholder="请输入密码" class="passWord" id="passWord">
+             </p>
+             <p class="formStyle ">
+                 <input type="button" value="登陆" class="loginBtn">
+             </p>
+         </form>
+     </div>
+</body>
+</html>

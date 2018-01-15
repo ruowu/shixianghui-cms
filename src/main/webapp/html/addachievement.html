@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"　content= "width=device-width, maximum-scale=1,　miniumum-scale=1, user-scalable=no" />
+    <title>新增业绩</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/addachievement.css">
+    <link rel="stylesheet" href="../css/head_menu.css">
+    <script src="../layui/layui.js"></script>
+    <script src="../js/url.js"></script>
+    <script src="../js/addachievement.js"></script>
+</head>
+<body>
+    <!--头部导航及左侧导航引入-->
+    <script src="../js/head_menu.js"></script>
+    <!--右侧内容部分-->
+<div class="right-content add-achievement-contain">
+    <form action="" class="layui-form" id="add_achievement_form">
+        <div class="layui-row layui-col-space10 ">
+            <!--商品-->
+            <div class="layui-col-md4">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">商品：</label>
+                    <div class="layui-input-block">
+                        <select id="addGoods"  lay-filter="addGoods" name="add-goods" lay-verify="" lay-search>
+                            <option value="">输入或选择商品名</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!--销售类型-->
+            <div class="layui-col-md4">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">销售类型</label>
+                    <div class="layui-input-block">
+                        <select name="sale-type" lay-verify="required" lay-filter="selectType" id="selectTypeId">
+                            <option value=""></option>
+                            <option value="0">零售</option>
+                            <option value="1">批发</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!--销售时间-->
+            <div class="layui-col-md4">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">销售时间</label>
+                    <div class="layui-input-block">
+                        <input type="text" class="layui-input" id="saleTime">
+                    </div>
+                </div>
+            </div>
+            <!--原价-->
+            <div class="layui-col-md4">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">原价</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="originalrice" required placeholder="自动生成（无需自填）"  lay-verify="required" class="layui-input " id="oldPrice" disabled>
+                    </div>
+                </div>
+            </div>
+            <!--售价-->
+            <div class="layui-col-md4">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">售价</label>
+                    <div class="layui-input-block">
+                        <input type="text" name=""lay-filter="newPri"  id="newPri" required  lay-verify="required\number" class="layui-input " placeholder="请输入（元）">
+                    </div>
+                </div>
+            </div>
+            <!--折扣-->
+            <div class="layui-col-md4">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">折扣</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="" id="discount" required  lay-verify="required" class="layui-input "placeholder="自动生成（无需自填）" disabled>
+                    </div>
+                </div>
+            </div>
+            <!--折扣原因-->
+            <div class="layui-col-md4">
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">折扣原因</label>
+                    <div class="layui-input-block">
+                        <textarea id="discountReason"  name="desc" placeholder="请输入折扣原因" class="layui-textarea" style="resize: none"></textarea>
+                    </div>
+                </div>
+            </div>
+            <!--数量-->
+            <div class="layui-col-md4">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">数量</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="" id="goodsNum" required  lay-verify="required\number" class="layui-input "placeholder="请填写数量">
+                    </div>
+                </div>
+            </div>
+            <!--总价-->
+            <div class="layui-col-md4">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">总价</label>
+                    <div class="layui-input-block">
+                        <input id="totalPri" type="text" name="" required  lay-verify="required" class="layui-input "placeholder="自动生成（无需自填）" disabled>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <!--销售员-->
+            <div class="layui-col-md4 seller">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">销售员：</label>
+                    <div class="layui-input-block">
+                        <select id="sellerName" name="add-goods" lay-verify="" lay-search>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!--买家-->
+            <div class="layui-col-md4">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">买家</label>
+                    <div class="layui-input-block">
+                        <input type="text" buyerId="" name="" id="buyer_name" lay-verify="required" class="layui-input "placeholder="请输入买家">
+                    </div>
+                    <ul class="buyers-name-list layui-hide"  id="buyers-name-list">
+                        <li>111111</li>
+                        <li>111111</li>
+                        <li>111111</li>
+                    </ul>
+                </div>
+            </div>
+            <hr/>
+            <br/>
+            <!--提交按钮-->
+            <div class="layui-col-md4 ">
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="" id="doAdd">确定新增</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

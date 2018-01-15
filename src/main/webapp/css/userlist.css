@@ -1,0 +1,64 @@
+/*头部狮享汇管理系统*/
+body{
+    overflow: hidden;
+}
+a.nav-top-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+/*退出登录*/
+a.checkout {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+a.user-name {
+    position: fixed;
+    top: 0px;
+    right: 80px;
+}
+/*左侧导航*/
+.layui-table {
+    width: 90%;
+    margin: 10px 0;
+    background-color: #fff;
+}
+/*右侧内容部分*/
+.right-content{
+    position: relative;
+    top:0px;
+    left: 200px;
+    border: 1px solid white;
+}
+.user-search {
+/*     position: absolute; */
+/*     top: 10px; */
+/*     right: 212px; */
+    margin-top: 10px;
+}
+input.search-ip {
+    height: 35px;
+    text-indent: 10px;
+}
+/*增加用户*/
+.add-user {
+	position: absolute;
+    top: 10px;
+    right: 212px;
+/*     margin-top: 80px; */
+}
+/*表格*/
+.user-table{
+    margin:0px;
+}
+th {
+    width: 143px;
+}
+/*<!--点击增加用户的弹出框-->*/
+#addUserForm{
+    margin:10px 30px;
+}
+
+button.layui-btn.add-save {
+    width: 100%;
+}

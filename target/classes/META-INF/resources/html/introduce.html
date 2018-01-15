@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"　content= "width=device-width, maximum-scale=1,　miniumum-scale=1, user-scalable=no" />
+    <title>公司主页</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/introduce.css">
+    <script src="../layui/layui.js"></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/url.js"></script>
+    <script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.min.js"></script>
+</head>
+<body>
+      <!--头部导航部分-->
+     <div class="header">
+         <div class="logo">
+             <img src="../images/logo2.jpg" alt="logo" style="width: 80px;height: 90px;">
+             <span class="company-name">狮享汇</span>
+             <a href="#" id="login" class="login">登录</a>
+         </div>
+         <div>
+<!--          	<hr style="height:5px;border:none;border-top:5px ridge;" /> -->
+         	<hr class="layui-bg-black" style="height:3px;border:none;border-top:5px;">
+         </div>
+     </div>
+     <!-- 公司内容介绍 -->
+     <div class="content">
+     	<!-- 公司介绍 -->
+     	<div class="grassland">
+     		<div class="layui-carousel" id="test1">
+			  	<div carousel-item>
+			    	<div><img src="../images/grassland1.jpg" style="width: 600px;height: 320px;"></div>
+			    	<div><img src="../images/grassland2.jpg" style="width: 600px;height: 320px;"></div>
+			    	<div><img src="../images/grassland3.jpg" style="width: 600px;height: 320px;"></div>
+			  	</div>
+			</div>
+			<div class="grasslandText">
+				红日度假村位于红原县瓦切镇日干乔国家湿地公园，地理位置得天独厚，风景秀丽，进去特有景观台可360度俯视红原大草原。是这条旅游线路的最佳观赏点。
+				牧场位于海拔3500米，这里天蓝地肥，拥有天然草原3000多亩。因地制宜发展绿色养殖，我们养殖的牛羊是真正的纯天然、无公害、绿色健康的食品。
+			</div>
+     	</div>
+     	<!-- 产品介绍 -->
+     	<div class="product">
+			<div class="productText">
+				牧场位于海拔3500米，这里天蓝地肥，拥有天然草原3000多亩。因地制宜发展绿色养殖，我们养殖的牛羊是真正的纯天然、无公害、绿色健康的食品。
+			</div>
+     		<div class="layui-carousel productPic" id="test2">
+			  	<div carousel-item>
+			    	<div><img src="../images/product1.jpg" style="width: 600px;height: 320px;"></div>
+			    	<div><img src="../images/product2.jpg" style="width: 600px;height: 320px;"></div>
+			    	<div><img src="../images/product3.jpg" style="width: 600px;height: 320px;"></div>
+			    	<div><img src="../images/product4.jpg" style="width: 600px;height: 320px;"></div>
+			    	<div><img src="../images/product5.jpg" style="width: 600px;height: 320px;"></div>
+			    	<div><img src="../images/product6.jpg" style="width: 600px;height: 320px;"></div>
+			    	<div><img src="../images/product7.jpg" style="width: 600px;height: 320px;"></div>
+			    	<div><img src="../images/product8.jpg" style="width: 600px;height: 320px;"></div>
+			  	</div>
+			</div>
+     	</div>
+     	<!-- 门店一角 -->
+     	<div class="store">
+     		<div class="layui-carousel" id="test3">
+			  	<div carousel-item>
+			    	<div><img src="../images/store1.jpg" style="width: 600px;height: 320px;"></div>
+			    	<div><img src="../images/store2.jpg" style="width: 600px;height: 320px;"></div>
+			  	</div>
+			</div>
+			<div class="storeText">
+				红日度假村位于红原县瓦切镇日干乔国家湿地公园，地理位置得天独厚，风景秀丽，拥有天然草原3000多亩。因地制宜发展绿色养殖，我们养殖的牛羊是真正的纯天然、无公害、绿色健康的食品。
+			</div>
+     	</div>
+     </div>
+     <!-- 底部信息 -->
+     <div class="foot">
+		<div>
+	     	<hr class="layui-bg-black" style="height:3px;border:none;border-top:5px;">
+		</div>
+		<div>
+			 <a href="#" id="introduce" class="introduce">关于狮享汇</a>&emsp;
+			 <a href="#" id="join" class="introduce">合作加盟</a>
+		</div>
+     </div>
+</body>
+<script type="text/javascript">
+var url=url();
+$("#login").on("click",function(){
+	window.location.href="/url/login";
+})
+layui.use('carousel', function(){
+	var carousel = layui.carousel;
+	carousel.render({
+	    elem: '#test1'
+	    ,width: '600px'
+	    ,height: '320px'
+	    ,interval: 5000
+	});
+	carousel.render({
+	    elem: '#test2'
+	    ,width: '600px'
+	    ,height: '320px'
+	    ,interval: 5000
+	});
+	carousel.render({
+	    elem: '#test3'
+	    ,width: '600px'
+	    ,height: '320px'
+	    ,interval: 5000
+	});
+})
+</script>
+</html>

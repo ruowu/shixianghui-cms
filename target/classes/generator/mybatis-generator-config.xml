@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+		location=".\\mysql-connector-java-5.1.35-bin.jar" />
+	<context id="context1">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/shixianghui?useUnicode=true&amp;characterEncoding=UTF-8"
+			userId="root" password="admin" />
+		<javaTypeResolver >  
+          
+        </javaTypeResolver>  
+		<javaModelGenerator targetPackage="com.shixianghui.base.dao"
+			targetProject="../../java" />
+		<sqlMapGenerator targetPackage="com.shixianghui.base.mapper"
+			targetProject="../../java" />
+		<javaClientGenerator targetPackage="com.shixianghui.base.mapper"
+			targetProject="../../java" type="XMLMAPPER" />
+
+		<!-- ********************************** MZ TABLE ************************************ -->
+		<!-- xt_file_upload -->
+	
+		<table schema="huatuo" tableName="xt_menu"></table>
+	</context>
+</generatorConfiguration>

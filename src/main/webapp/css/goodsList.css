@@ -1,0 +1,89 @@
+/*头部狮享汇管理系统*/
+body{
+    overflow: hidden;
+}
+a.nav-top-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+/*退出登录*/
+a.checkout {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+a.goods-name {
+    position: fixed;
+    top: 0px;
+    right: 80px;
+}
+/*左侧导航*/
+.layui-table {
+    width: 85%;
+    margin: 10px 0;
+    background-color: #fff;
+}
+/*右侧内容部分*/
+.right-content{
+    position: relative;
+    top:0px;
+    left: 200px;
+    border: 1px solid white;
+}
+.goods-search {
+/*     position: absolute; */
+/*     top: 10px; */
+    margin-top: 30px;
+/*     right: 212px; */
+}
+input.search-ip {
+    height: 35px;
+    text-indent: 10px;
+}
+/*增加商品*/
+.add-goods {
+/*     margin-top: 60px; */
+	top: 30px;
+    position: absolute;
+    right: 212px;
+}
+/*表格*/
+.goods-table{
+    margin-top:20px;
+}
+th {
+    width: 143px;
+}
+/*<!--点击增加用户的弹出框-->*/
+#addGoodsForm{
+    margin:10px 30px;
+}
+
+button.layui-btn.add-save {
+    width: 100%;
+}
+
+.goods_search_btn {
+	top: 30px;
+    position: absolute;
+    left: 200px;
+}
+
+/*===========商品类型===========*/
+.goods_type {
+    margin: 10px 10px 10px 10px;
+    width:180px
+}
+
+#showImg {
+    width: 550px !important;
+    height: 380px;
+    position: relative;
+    top: 20px;
+    left: 100px;
+}
+
+.imgStyle{
+	width: 550px;
+	height: 380px;
+}

@@ -1,0 +1,19 @@
+﻿# Server settings
+server:
+    port: 80
+#    address: localhost
+
+
+# SPRING PROFILES
+spring:       
+    # HTTP ENCODING
+    http:
+        encoding.charset: UTF-8
+        encoding.enable: true
+        encoding.force: true
+
+# MyBatis
+mybatis:
+    typeAliasesPackage: com.shixianghui.base.dao;
+    mapperLocations: classpath:/com/shixianghui/base/mapper/*.xml
+    configLocation: classpath:/mybatis-config.xml

@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+}
+/*头部导航部分*/
+span.company-name {
+    color: #EA3935;
+    font-size: 25px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.header{
+    height: 100px;
+/*     background: #393D49; */
+}
+.login{
+	position:absolute;
+	top:30px;
+	right: 10px;
+/* 	color:red; */
+	text-decoration:underline;
+	font-size: 18px;
+}
+.content{
+	margin-top: 5px;
+	margin-left: 10px;
+}
+.grassland{
+	position:absolute;
+	top:110px;
+	left: 100px;
+}
+.product{
+	position:absolute;
+	top:500px;
+	left: 100px;
+}
+.store{
+	position:absolute;
+	top:880px;
+	left: 100px;
+}
+.grasslandText{
+	position:absolute;
+	top:30px;
+	left: 650px;
+	height: 320px;
+	width: 500px;
+	color: green;
+	font-size: 20px;
+}
+.productPic{
+	position:absolute;
+	top:10px;
+	left: 650px;
+	height: 320px;
+	width: 500px;
+}
+.productText{
+	position:absolute;
+	top:10px;
+	left: 30px;
+	height: 320px;
+	width: 500px;
+	color:blue;
+	font-size: 20px;
+}
+.storeText{
+	position:absolute;
+	top:10px;
+	left: 650px;
+	height: 320px;
+	width: 500px;
+	color:orange;
+	font-size: 20px;
+}
+.foot{
+	position:absolute;
+	top:1500px;
+	height: 100px;
+	width :100%
+}

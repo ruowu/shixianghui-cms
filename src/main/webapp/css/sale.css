@@ -1,0 +1,90 @@
+/*===========查询时间===========*/
+.query-time {
+    margin: 40px 10px 10px 10px;
+}
+input#start-time {
+    position: relative;
+    top: -28px;
+    left: 70px;
+}
+span.end-time-title {
+    position: relative;
+    top: -57px;
+    left: 280px;
+}
+input#end-time {
+    position: relative;
+    top: -85px;
+    left: 350px;
+}
+/*===========商品选择===========*/
+.commodity-choice {
+    margin: -58px 10px 10px 10px;
+}
+/*重回下拉框长度*/
+.layui-input-block {
+    width: 200px;
+}
+/*商品类型选择框定位*/
+.layui-input-block.commodity-type {
+    position: relative;
+    top: -26px;
+    left: -40px;
+}
+/*商品名称选择框定位*/
+.layui-form-item.commodity-name {
+    position: relative;
+    top: -79px;
+    left: 170px;
+}
+/*===========销售人员查询===========*/
+.salesman {
+    margin: -55px 10px 10px 10px;
+    position: relative;
+}
+input.salesman-name-ip.layui-input {
+    width:200px;
+    position: relative;
+    top: -28px;
+    left: 98px;
+}
+
+ul.salesman-name-list {
+    position: absolute;
+    left: 98px;
+    top: 35px;
+    width: 200px;
+    padding: 5px 0;
+    z-index: 999;
+    border: 1px solid #d2d2d2;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12);
+    box-sizing: border-box;
+}
+ul.salesman-name-list li{
+    padding: 0 10px;
+    line-height: 36px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+ul.salesman-name-list li:hover{
+    background-color: #f2f2f2;
+}
+/*===========确定按钮===========*/
+.do-search {
+    position: relative;
+    top: -75px;
+    left: 316px;
+}
+/*===========表格===========*/
+.query-criteria {
+    margin-bottom: -66px;
+}
+/*表格宽度*/
+table.layui-table {
+    width:100%;
+}

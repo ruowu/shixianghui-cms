@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>欢迎登录</title>
+</head>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<body>
+	<form action="">
+		用户名:<input type="text" name="userName" id="userName"/><br/>
+		密&emsp;码:<input type="password" name="passWord" id="passWord"/><br/>
+		<input type="button" value="登    录" id="loginButton"/>
+	</form>
+</body>
+<script type="text/javascript">
+	$("#loginButton").click(function(){
+		var params={};
+		params.userName = $("#userName").val();
+		params.passWord = $("#passWord").val();
+	  $.get("http://localhost:9001/user/login",params,function(data,status){
+		  if(status=="success"){
+			  alert(1);
+			  if(data.code == '000000'){
+				  window.location.href="/index.jsp"; 
+			  }else{
+			  	alert("登录失败")
+			  }
+		  }else{
+			  alert("登录失败")
+		  }
+	  });
+	});
+</script>
+</html>

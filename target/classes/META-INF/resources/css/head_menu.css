@@ -1,0 +1,30 @@
+/*头部狮享汇管理系统*/
+body{
+    overflow: hidden;
+}
+a.nav-top-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+/*左侧导航*/
+ul.layui-nav.layui-nav-tree.layui-nav-side {
+    top: 58px;
+}
+/*退出登录*/
+a.checkout {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+a.user-name {
+    position: fixed;
+    top: 0px;
+    right: 80px;
+}
+/*右侧内容部分*/
+.right-content{
+    position: relative;
+    top:0px;
+    left: 200px;
+    border: 1px solid white;
+}

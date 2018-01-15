@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	　content="width=device-width, maximum-scale=1,　miniumum-scale=1, goods-scalable=no" />
+<title>商品管理</title>
+<link rel="stylesheet" href="../layui/css/layui.css">
+<link rel="stylesheet" href="../css/goodsList.css">
+<link rel="stylesheet" href="../css/head_menu.css">
+<script src="../layui/layui.js"></script>
+<script src="../js/url.js"></script>
+<script src="../js/goodsList.js"></script>
+<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.min.js"></script>
+</head>
+<body>
+	<!--头部导航及左侧导航引入-->
+	<script src="../js/head_menu.js"></script>
+	<!--右侧内容部分-->
+	<div class="right-content">
+		<!--搜索页面-->
+		<div class="goods-search">
+			<form action="" class="layui-form">
+				<!--商品类型-->
+				<div class="layui-form-item ">
+					<div class="goods_type">
+						<select name="commodity-type" lay-filter="commodity-type"
+							id="commodity-type">
+							<option value="">全部商品类型</option>
+						</select>
+					</div>
+				</div>
+			</form>
+			<input type="button" class="search-btn layui-btn goods_search_btn" value="搜索">
+		</div>
+		<!--增加商品按钮-->
+		<div class="add-goods">
+			<button id="addGoods" data-method="offset" data-type="auto"
+				class="layui-btn">新增商品</button>
+		</div>
+		<!--用户表格显示-->
+		<div class="goods-table" id="goodsTable">
+			<table class="layui-table">
+				<thead>
+					<tr>
+						<th style="display: none">商品ID</th>
+						<th style="display: none">图片url</th>
+						<th>商品名</th>
+						<th>商品类型</th>
+						<th>市场价</th>
+						<th>批发价</th>
+						<th>库存数量</th>
+						<th>单位</th>
+						<th>图片</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody id="goodsBox">
+				</tbody>
+			</table>
+			<!--分页-->
+			<div id="goodsPage"></div>
+		</div>
+	</div>
+	<!-- 点击查看商品图片 -->
+	<div class="layui-carousel" id="showImg" style="display: none;">
+	  <div carousel-item="" id="showImgBody">
+	  </div>
+	</div>
+<!-- 	 </div> -->
+</body>
+</html>

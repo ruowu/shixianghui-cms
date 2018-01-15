@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	　content="width=device-width, maximum-scale=1,　miniumum-scale=1, goods-scalable=no" />
+<title>商品管理</title>
+<link rel="stylesheet" href="../layui/css/layui.css">
+<link rel="stylesheet" href="../css/goodsEdit.css">
+<link rel="stylesheet" href="../css/head_menu.css">
+<script src="../layui/layui.js"></script>
+<script src="../js/url.js"></script>
+<script src="../js/goodsEdit.js"></script>
+<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.min.js"></script>
+</head>
+<body>
+	<!--头部导航及左侧导航引入-->
+	<script src="../js/head_menu.js"></script>
+	<!--右侧内容部分-->
+	<div class="right-content">
+	<div id="addGoodsForm" class=""
+		style="width: 700px; height: 600px">
+		<form action="" class="layui-form" id="addgoods">
+			<!--商品id-->
+			 <div class="layui-col-md4">
+			 <div class="layui-col-md4">
+				<div class="layui-form-item  layui-hide">
+					<label class="layui-form-label">商品ID</label>
+					<div class="layui-input-block">
+						<input type="text" name="goodsId" id="goodsId" class="layui-input">
+					</div>
+				</div>
+			</div>
+			</div>
+			<!--创建人id-->
+			<div class="layui-form-item layui-hide">
+				<label class="layui-form-label ">创建人ID</label>
+				<div class="layui-input-block">
+					<input type="text" name="createrId" id="createrId"
+						class="layui-input">
+				</div>
+			</div>
+			<!--商品类型-->
+			 <div class="layui-col-md4">
+			<div class="layui-form-item">
+				<label class="layui-form-label">商品类型</label>
+				<div class="layui-input-block">
+					<select id="goodsType" name="goodsType" lay-verify="required">
+					</select>
+				</div>
+			</div>
+			</div>
+			<!--商品名-->
+			 <div class="layui-col-md4">
+			<div class="layui-form-item">
+				<label class="layui-form-label">商品名</label>
+				<div class="layui-input-block">
+					<input type="text" name="goodsName" id="goodsName"
+						lay-verify="required" class="layui-input">
+				</div>
+			</div>
+			</div>
+			<!--批发价-->
+			 <div class="layui-col-md4">
+			<div class="layui-form-item">
+				<label class="layui-form-label">批发价</label>
+				<div class="layui-input-block">
+					<input type="text" name="tradePrice" id="tradePrice"
+						lay-verify="required\number" class="layui-input"
+						placeholder="请输入（元）">
+				</div>
+			</div>
+			</div>
+			<!--市场价-->
+			 <div class="layui-col-md4">
+			<div class="layui-form-item">
+				<label class="layui-form-label">市场价</label>
+				<div class="layui-input-block">
+					<input type="text" name="marketPrice" id="marketPrice"
+						lay-verify="required\number" class="layui-input"
+						placeholder="请输入（元）">
+				</div>
+			</div>
+			</div>
+			<!--单位-->
+			 <div class="layui-col-md4">
+			<div class="layui-form-item">
+				<label class="layui-form-label">单位</label>
+				<div class="layui-input-block" id="gender">
+					<select id="units" name="units" lay-verify="required">
+					</select>
+				</div>
+			</div>
+			</div>
+			<!--创建人id-->
+			<div class="layui-form-item layui-hide">
+				<label class="layui-form-label ">图片地址</label>
+				<div class="layui-input-block">
+					<input type="text" name="imgUrls" id="imgUrls"
+						class="layui-input">
+				</div>
+			</div>
+			<!-- 图片 -->
+			<div class="layui-form-item ">
+				<div class="layui-input-block">
+					<button type="button" class="layui-btn" id="selectPic">选择图片</button> 
+					<div class="layui-upload-list">
+					    <table class="layui-table">
+					      <thead>
+					        <tr>
+						        <th>图片</th>
+						        <th>状态</th>
+						        <th>操作</th>
+					      	</tr>
+					      </thead>
+					     <tbody id="demoList"></tbody>
+					    </table>
+					</div>		
+				</div>
+				<div class="layui-input-block">
+					<button type="button" class="layui-btn" id="upload">开始上传</button>
+				</div>
+			</div>
+			<!--创建时间-->
+			 <div class="layui-col-md4">
+			<div class="layui-form-item layui-hide">
+				<label class="layui-form-label">创建时间</label>
+				<div class="layui-input-block" id="createTime ">
+					<input type="text" name="createtime" class="layui-input"
+						id="createtime">
+				</div>
+			</div>
+			</div>
+			<!-- 是否有效-->
+			 <div class="layui-col-md4">
+			<div class="layui-form-item layui-hide">
+				<label class="layui-form-label"> 是否有效</label>
+				<div class="layui-input-block">
+					<input type="text" name="status" id="status" class="layui-input">
+				</div>
+			</div>
+			</div>
+			<!--保存按钮-->
+			 <div class="layui-col-md4">
+			<div class="layui-form-item ">
+				<div class="layui-input-block">
+					<button id="add_save" class="layui-btn add-save" lay-submit
+						lay-filter="">保存</button>
+				</div>
+			</div>
+			</div>
+			<div class="layui-form-item ">
+				<div class="layui-input-block">
+					<button id="return_list" class="layui-btn add-save" lay-submit
+						lay-filter="">返回列表</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
